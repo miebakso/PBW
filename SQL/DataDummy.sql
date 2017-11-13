@@ -1,15 +1,15 @@
-INSERT INTO ActTypes
+INSERT INTO Act_Type (actTypes)
 VALUES ('assignment');
-INSERT INTO ActTypes
+INSERT INTO Act_Type (actTypes)
 VALUES ('files');
 
-INSERT INTO Courses
+INSERT INTO Courses (code,course)
 VALUES ('AIF315', 'Pemrograman Berbasis Web');
-INSERT INTO Courses
+INSERT INTO Courses (code,course)
 VALUES ('AIF101', 'Pemrograman Berorientasi Objek');
-INSERT INTO Courses
+INSERT INTO Courses (code,course)
 VALUES ('AIF314', 'Pemrograman Basis Data');
-INSERT INTO Courses
+INSERT INTO Courses (code,course)
 VALUES ('AIF112', 'Pemrograman Komputer');
 
 INSERT INTO Enrollments

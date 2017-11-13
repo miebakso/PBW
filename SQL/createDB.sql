@@ -58,7 +58,7 @@ CREATE TABLE `act_type` (
 CREATE TABLE `courses` (
   `ID_C` int(11) NOT NULL,
   `code` varchar(6) NOT NULL,
-  `courses` varchar(50) NOT NULL
+  `course` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

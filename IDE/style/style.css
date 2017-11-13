@@ -1,0 +1,48 @@
+@font-face{
+    font-family: fanHeiti;
+    src: url('../fonts/AdobeFanHeitiStd-Bold.otf');
+}
+
+@font-face{
+    font-family: candara;
+    src: url('../fonts/Candara.ttf');
+}
+
+body#home{
+    background-image: url("../img/bgImg.jpg");
+    font-family: candara
+}
+
+div#topnav{
+    margin: 10px;
+}
+
+#topnav>button{
+    margin: 2px;
+}
+
+div#title{
+    color: white;
+    position: absolute;
+    top: 200px;
+    left: 30px;
+}
+
+div#title>h1{
+    font-size: 300%;
+}
+
+div#footer{
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    left: 30px;
+}
+
+div#footer>p{
+    font-size: 12px;
+}
+
+button{
+    cursor: pointer;
+}
