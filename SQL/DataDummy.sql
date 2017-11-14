@@ -1,6 +1,6 @@
-INSERT INTO Act_Type (actTypes)
+INSERT INTO actTypes (actTypes)
 VALUES ('assignment');
-INSERT INTO Act_Type (actTypes)
+INSERT INTO actTypes (actTypes)
 VALUES ('files');
 
 INSERT INTO Courses (code,course)
