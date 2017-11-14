@@ -1,0 +1,21 @@
+.sidebar-content {
+	margin: 20px 0 0 15px;
+}
+
+.sidebar-custom-hr{
+	margin-right: 10px;
+	border: none;
+  height: 2px;
+  background-color: grey; /* Modern Browsers */
+}
+
+.profile-pic {
+	height: 80px;
+	width: 80px;
+	border: 1px solid grey;
+	margin-bottom: 10px;
+}
+
+i {
+	margin-right: 5px;
+}
