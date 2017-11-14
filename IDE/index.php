@@ -26,9 +26,9 @@
 				<span onclick="document.getElementById('modal').style.display='none'" class="w3-button w3-display-topright" style="margin:5px">&times;</span>
 				<h1>Login</h1>
 				<form method="POST" action="phpScript/login.php">
-					<input class="w3-input" type="text" name="name" id="" placeholder="Username"> <br>
-					<input class="w3-input" type="password" name="pass" id="" placeholder="Password"> <br>
-					<input type="submit" name="" id="" value="LOGIN" class="w3-button w3-black w3-text-white">
+					<input class="w3-input" type="text" name="idxName" id="name" placeholder="Username"> <br>
+					<input class="w3-input" type="password" name="idxPass" id="pass" placeholder="Password"> <br>
+					<input type="submit" name="idxLogin" id="login" value="LOGIN" class="w3-button w3-black w3-text-white">
 					<p><a href="">Forget password</a> or <a href="">forget username</a>?</p>
 				</form>
 			</div>
