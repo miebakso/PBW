@@ -14,9 +14,15 @@
 			if($pass!=$res['pass']){
 				echo "WRONG PASSWORD";
 			}else{
-				$query="SELECT users.username, usergroups.name as groupname FROM users INNER JOIN usergroups ON users.ID_UG=usergroups.ID_UG WHERE users.username=$name";
+				//session
+				session_start();
+				$_SESSION['name']=$res['name'];echo "<br>";
+				$_SESSION['username']=$res['username'];echo "<br>";
+				$_SESSION['userID']=$res['userID'];echo "<br>";
+
+				$query="SELECT users.username, usergroups.name as groupname FROM users INNER JOIN usergroups ON users.ID_UG=usergroups.ID_UG WHERE users.username='$name'";
 				$res=$conn->query($query)->fetch_array();
-				echo $res['groupname'];
+
 				if($res['groupname']=="lecturer"){
 					header ('Location: ../pages/lecturer/lct.php');
 				}else if($res['groupname']=="student"){

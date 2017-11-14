@@ -3,7 +3,7 @@
 	<div class="row">
 		<div class="col-9">
 			<div class="header-content">
-				<h2>Interactive Digital Learning Environtment</h2>
+				<h2>Interactive Digital Learning Environment</h2>
 				<p>Faculty of Information Technology and Science</p>
 				<p>Parahyangan Catholic University</p>
 				<hr class="custom-hr">
