@@ -41,10 +41,16 @@ CREATE TABLE `activities` (
 -- --------------------------------------------------------
 
 --
+
 -- Table structure for table `actTypes`
 --
 
-CREATE TABLE `actTypes` (
+
+-- Table structure for table `acttypes`
+--
+
+CREATE TABLE `acttypes` (
+
   `ID_AT` int(11) NOT NULL,
   `actTypes` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -155,9 +161,14 @@ ALTER TABLE `activities`
   ADD KEY `ID_C` (`ID_C`);
 
 --
+
 -- Indexes for table `actTypes`
 --
-ALTER TABLE `actTypes`
+
+-- Indexes for table `acttypes`
+--
+ALTER TABLE `acttypes`
+
   ADD PRIMARY KEY (`ID_AT`);
 
 --
@@ -206,9 +217,14 @@ ALTER TABLE `users`
 ALTER TABLE `activities`
   MODIFY `ID_A` int(11) NOT NULL AUTO_INCREMENT;
 --
+
 -- AUTO_INCREMENT for table `actTypes`
 --
-ALTER TABLE `actTypes`
+
+-- AUTO_INCREMENT for table `acttypes`
+--
+ALTER TABLE `acttypes`
+
   MODIFY `ID_AT` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `courses`
@@ -239,7 +255,9 @@ ALTER TABLE `users`
 --
 ALTER TABLE `activities`
   ADD CONSTRAINT `activities_ibfk_1` FOREIGN KEY (`ID_C`) REFERENCES `courses` (`ID_C`),
-  ADD CONSTRAINT `activities_ibfk_2` FOREIGN KEY (`ID_AT`) REFERENCES `actTypes` (`ID_AT`);
+
+  ADD CONSTRAINT `activities_ibfk_2` FOREIGN KEY (`ID_AT`) REFERENCES `acttypes` (`ID_AT`);
+
 
 --
 -- Constraints for table `enrollments`
