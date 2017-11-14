@@ -1,4 +1,4 @@
-<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:300px">
   <div class="sidebar-content">
   	<p>You are login as</p>
   	<h5>2011730053</h5>
