@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2017 at 01:36 PM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 7.0.8
+-- Generation Time: Nov 15, 2017 at 05:27 AM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 7.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -74,10 +76,10 @@ CREATE TABLE `courses` (
 --
 
 INSERT INTO `courses` (`ID_C`, `code`, `course`) VALUES
-(1, 'AIF315', 'Pemrograman Berbasis Web'),
-(2, 'AIF101', 'Pemrograman Berorientasi Objek'),
-(3, 'AIF314', 'Pemrograman Basis Data'),
-(4, 'AIF112', 'Pemrograman Komputer');
+(2, 'AIF315', 'Pemrograman Berbasis Web'),
+(3, 'AIF101', 'Pemrograman Berorientasi Objek'),
+(4, 'AIF314', 'Pemrograman Basis Data'),
+(5, 'AIF112', 'Pemrograman Komputer');
 
 -- --------------------------------------------------------
 
@@ -90,20 +92,11 @@ CREATE TABLE `enrollments` (
   `ID_U` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `enrollments`
---
-
-INSERT INTO `enrollments` (`ID_C`, `ID_U`) VALUES
-(1, 1),
-(1, 2),
-(2, 3),
-(2, 2);
-
 -- --------------------------------------------------------
 
 --
 -- Stand-in structure for view `enrollment_data`
+-- (See below for the actual view)
 --
 CREATE TABLE `enrollment_data` (
 `Code` varchar(6)
@@ -206,6 +199,7 @@ INSERT INTO `users` (`ID_U`, `userID`, `name`, `username`, `pass`, `ID_UG`) VALU
 
 --
 -- Stand-in structure for view `user_data`
+-- (See below for the actual view)
 --
 CREATE TABLE `user_data` (
 `userID` varchar(10)
@@ -294,31 +288,37 @@ ALTER TABLE `users`
 --
 ALTER TABLE `activities`
   MODIFY `ID_A` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `acttypes`
 --
 ALTER TABLE `acttypes`
   MODIFY `ID_AT` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
   MODIFY `ID_C` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `submissions`
 --
 ALTER TABLE `submissions`
   MODIFY `ID_SUB` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `usergroups`
 --
 ALTER TABLE `usergroups`
-  MODIFY `ID_UG` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID_UG` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID_U` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+  MODIFY `ID_U` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+
 --
 -- Constraints for dumped tables
 --
@@ -349,6 +349,7 @@ ALTER TABLE `submissions`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `ID_UG` FOREIGN KEY (`ID_UG`) REFERENCES `usergroups` (`ID_UG`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
