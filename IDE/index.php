@@ -34,9 +34,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="footer">
-		<p>© Developed by Maria Veronica Claudia Muljana, S.T.</p>
-	</div>
+	<?php include("layout/footer.php"); ?>
 </body>
 
 <script>
