@@ -22,7 +22,7 @@
 
 				$query="SELECT users.username, usergroups.name as groupname FROM users INNER JOIN usergroups ON users.ID_UG=usergroups.ID_UG WHERE users.username='$name'";
 				$res=$conn->query($query)->fetch_array();
-
+				$_SESSION['job']=$res['groupname'];
 				if($res['groupname']=="lecturer"){
 					header ('Location: ../pages/lecturer/lct.php');
 				}else if($res['groupname']=="student"){
