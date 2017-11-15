@@ -11,11 +11,12 @@
 		if($conn->query($query)->num_rows==0){
 			echo "WRONG USERNAME";
 		}else{
+			setcookie("username",$name,time()+(86400*30),"index.php");
 			if($pass!=$res['pass']){
 				echo "WRONG PASSWORD";
 			}else{
 				//session
-				session_start();
+				include("startSession.php");
 				$_SESSION['name']=$res['name'];echo "<br>";
 				$_SESSION['username']=$res['username'];echo "<br>";
 				$_SESSION['userID']=$res['userID'];echo "<br>";
