@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="background">
 
 <head>
 	<?php include("layout/style.php"); ?>
