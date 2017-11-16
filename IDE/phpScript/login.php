@@ -11,7 +11,7 @@
 		if($conn->query($query)->num_rows==0){
 			echo "WRONG USERNAME";
 		}else{
-			setcookie("username",$name,time()+(86400*30),"index.php");
+			setcookie("username",$name,time()+(86400*30),"/");
 			if($pass!=$res['pass']){
 				echo "WRONG PASSWORD";
 			}else{
