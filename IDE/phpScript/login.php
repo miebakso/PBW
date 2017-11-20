@@ -20,6 +20,7 @@
 				$_SESSION['name']=$res['name'];echo "<br>";
 				$_SESSION['username']=$res['username'];echo "<br>";
 				$_SESSION['userID']=$res['userID'];echo "<br>";
+				$_SESSION['ID_U']=$res['ID_U'];
 
 				$query="SELECT users.username, usergroups.name as groupname FROM users INNER JOIN usergroups ON users.ID_UG=usergroups.ID_UG WHERE users.username='$name'";
 				$res=$conn->query($query)->fetch_array();
