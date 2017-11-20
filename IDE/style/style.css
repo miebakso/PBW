@@ -50,3 +50,9 @@ div#footer>p{
 button{
     cursor: pointer;
 }
+
+
+.add-activity a{
+    color: white;
+    background: grey;
+}

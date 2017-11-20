@@ -18,22 +18,25 @@
 			<?php include("../../layout/sidebar.php"); ?>
 		</div>
 		<div class="courses">
-			<?php include('../../phpScript/courses.php'); ?>
+			<?php include('../../phpScript/activities.php'); ?>
 
 			<div class="panel panel-default">
 			  <div class="panel-heading">
-			  	<div class="overview">Course Overview</div>
+			  	<div class="overview"><?php echo $_GET['courseTitle'] ?></div>
 			  </div>
 			</div>
 			<?php 
 				while ($row = $temp->fetch_array()) {
-					$course = $row['course'];
-					$courseID = $row['id'];
 					echo "
 					<div class='panel panel-default'>
 						<div class='panel-body'>
-					  	<a href='course.php?id=$courseID&courseTitle=$course'>$course</a>
+					  	<a href='#'><i class='fa fa-newspaper-o' aria-hidden='true'></i> Topic ".$row['topic']."</a>
+					  	<br>
+					  	<div class='add-activity' style='margin-top: 10px;'>
+				  		<a href='#'' style='width: 100px;' class='btn btn-secondary active' role='button' aria-pressed='true'>Add</a>
+					  	</div>
 					  </div>
+
 					</div>
 					";
 				}

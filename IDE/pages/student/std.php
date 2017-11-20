@@ -32,7 +32,7 @@
 					echo "
 					<div class='panel panel-default'>
 						<div class='panel-body'>
-					  	<a href='courses.php?id=$courseID&courseTitle=$course'>$course</a>
+					  	<a href='course.php?id=$courseID&courseTitle=$course'>$course</a>
 					  </div>
 					</div>
 					";
