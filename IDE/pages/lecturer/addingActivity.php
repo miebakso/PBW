@@ -41,7 +41,7 @@
 			<!-- include sidebar -->
 			<?php include("../../layout/sidebar.php"); ?>
 		</div>
-		<div class="courses" style="overflow-y: scroll;">
+		<div class="courses" style="height: 700px; overflow-y: scroll;">
 			<div class="panel panel-default">
 			  <div class="panel-heading">
 			  	<div class="overview">Adding new Assignment</div>
@@ -81,12 +81,26 @@
 					    <label  class="col-sm-2 col-form-label"><center>Allow submission from <i class="fa fa-question-circle" aria-hidden="true"></i></center></label>
 					    <div class="col-sm-2">
 					      <input type="date" class="form-control" id="" >
+					      
+					    </div>
+					    <div class="col-sm-2">
+					      
+					      <input type="checkbox" class="form-check-input">
+					     	<label class="form-check-label">
+					      Enable
+					    	</label>
 					    </div>
 					  </div>
 					  <div class="form-group row">
 					    <label  class="col-sm-2 col-form-label"><center>Due date <i class="fa fa-question-circle" aria-hidden="true"></i></center></label>
 					    <div class="col-sm-2">
 					      <input type="date" class="form-control" id="" >
+					    </div>
+					    <div class="col-sm-2">
+				      	<input type="checkbox" class="form-check-input">
+					     	<label class="form-check-label">
+					      Enable
+					    	</label>
 					    </div>
 					  </div>
 
@@ -103,6 +117,8 @@
 					    <span>Select files <i class="fa fa-question-circle" aria-hidden="true"></i></span>
 					  </label>
 				 	</fieldset>
+
+				 	<center><button class="w3-button w3-black w3-text-white">SAVE AND RETURN TO COURSE</button> <button class="w3-button w3-black w3-text-white">CANCEL</button></center>
 				</form>
 				</div>
 			</div>
