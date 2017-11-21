@@ -2,7 +2,9 @@
 <html class="background">
 
 <head>
-	<?php include("layout/style.php"); ?>
+	<?php 
+		include("layout/style.php");
+	?>
 	<title>IDE</title>
 </head>
 
