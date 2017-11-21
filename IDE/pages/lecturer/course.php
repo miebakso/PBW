@@ -18,7 +18,7 @@
 			<?php include("../../layout/sidebar.php"); ?>
 		</div>
 		<div class="courses">
-			<?php include('../../phpScript/activities.php'); ?>
+			<?php include('../../phpScript/topics.php'); ?>
 
 			<div class="panel panel-default">
 			  <div class="panel-heading">
