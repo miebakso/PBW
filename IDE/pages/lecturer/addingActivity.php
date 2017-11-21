@@ -48,83 +48,125 @@
 			  </div>
 			</div>
 			<div>
-				<button style="right: 20px; position: absolute; margin-right: 20px" class="w3-button w3-black w3-text-white">Collapse All</button>
+				<button id="all" style="right: 20px; position: absolute; margin-right: 20px" class="w3-button w3-black w3-text-white">Collapse All</button>
 			</div>
 			<div style="margin-top: 100px; padding: 5px;">
 				<div style="padding: 0 10%">
 				<form>
 				 	<fieldset >
 				  	<legend>
-				  		<button class="w3-button w3-black w3-text-white">General <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+				  		<div id="general" class="w3-button w3-black w3-text-white">General <i class="fa fa-caret-down" aria-hidden="true"></i></div>
 				  	</legend>
 
-				  	<div class="form-group row">
-					    <label  style="color: red" class="col-sm-2 col-form-label"><center>Name*</center></label>
-					    <div class="col-sm-10">
-					      <input type="text" class="form-control" id="" >
-					    </div>
-					    <label style="margin-top: 20px" class="col-sm-2 col-form-label"><center>Description</center></label>
-					    <div style="margin-top: 5px" class="col-sm-10">
-					      <textarea class="form-control" id="" rows="3"></textarea>
-					    </div>
-					  </div>
+				  	<div id="one">
+					  	<div class="form-group row">
+						    <label  style="color: red" class="col-sm-2 col-form-label"><center>Name*</center></label>
+						    <div class="col-sm-10">
+						      <input type="text" class="form-control" id="" >
+						    </div>
+						    <label style="margin-top: 20px" class="col-sm-2 col-form-label"><center>Description</center></label>
+						    <div style="margin-top: 5px" class="col-sm-10">
+						      <textarea class="form-control" id="" rows="3"></textarea>
+						    </div>
+						  </div>
+						</div>
 
 				 	</fieldset>
 
 				 	<fieldset >
 				  	<legend>
-				  		<button class="w3-button w3-black w3-text-white">Availability <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+				  		<div id="avail" class="w3-button w3-black w3-text-white">Availability <i class="fa fa-caret-down" aria-hidden="true"></i></div>
 				  	</legend>
 				  	
 
-				  	<div class="form-group row">
-					    <label  class="col-sm-2 col-form-label"><center>Allow submission from <i class="fa fa-question-circle" aria-hidden="true"></i></center></label>
-					    <div class="col-sm-2">
-					      <input type="date" class="form-control" id="" >
-					      
-					    </div>
-					    <div class="col-sm-2">
-					      
-					      <input type="checkbox" class="form-check-input">
-					     	<label class="form-check-label">
-					      Enable
-					    	</label>
-					    </div>
-					  </div>
-					  <div class="form-group row">
-					    <label  class="col-sm-2 col-form-label"><center>Due date <i class="fa fa-question-circle" aria-hidden="true"></i></center></label>
-					    <div class="col-sm-2">
-					      <input type="date" class="form-control" id="" >
-					    </div>
-					    <div class="col-sm-2">
-				      	<input type="checkbox" class="form-check-input">
-					     	<label class="form-check-label">
-					      Enable
-					    	</label>
-					    </div>
-					  </div>
+				  	<div id="two">
+					  	<div class="form-group row">
+						    <label  class="col-sm-2 col-form-label"><center>Allow submission from <i class="fa fa-question-circle" aria-hidden="true"></i></center></label>
+						    <div class="col-sm-2">
+						      <input type="date" class="form-control" id="" >
+						      
+						    </div>
+						    <div class="col-sm-2">
+						      
+						      <input type="checkbox" class="form-check-input">
+						     	<label class="form-check-label">
+						      Enable
+						    	</label>
+						    </div>
+						  </div>
+
+						  <div class="form-group row">
+						    <label  class="col-sm-2 col-form-label"><center>Due date <i class="fa fa-question-circle" aria-hidden="true"></i></center></label>
+						    <div class="col-sm-2">
+						      <input type="date" class="form-control" id="" >
+						    </div>
+						    <div class="col-sm-2">
+					      	<input type="checkbox" class="form-check-input">
+						     	<label class="form-check-label">
+						      Enable
+						    	</label>
+						    </div>
+						  </div>
+
+						</div>
 
 
 				 	</fieldset>
 
 				 	<fieldset >
 				  	<legend>
-				  		<button class="w3-button w3-black w3-text-white">Content <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+				  		<div id="content" class="w3-button w3-black w3-text-white">Content <i class="fa fa-caret-down" aria-hidden="true"></i></div>
 				  	</legend>
 				  	
-				  	<label class="custom-file">
-					    <input class="inputfile" type="file"  id="file" />
-					    <span>Select files <i class="fa fa-question-circle" aria-hidden="true"></i></span>
-					  </label>
+				  	<div id="three"
+					  	<label class="custom-file">
+						    <input class="inputfile" type="file"  id="file" />
+						    <span>Select files <i class="fa fa-question-circle" aria-hidden="true"></i></span>
+						  </label>
+						</div>
 				 	</fieldset>
 
-				 	<center><button class="w3-button w3-black w3-text-white">SAVE AND RETURN TO COURSE</button> <button class="w3-button w3-black w3-text-white">CANCEL</button></center>
+				 	<center><button class="w3-button w3-black w3-text-white">SAVE AND RETURN TO COURSE</button> <div class="w3-button w3-black w3-text-white">CANCEL</div></center>
 				</form>
 				</div>
 			</div>
 		</div>
 	</body>
 	<script>
+		$('#all').click( function() {
+			if($('#one').is(":visible") || $('#two').is(":visible") || $('#three').is(":visible")){
+				$('#one').hide();
+				$('#two').hide();
+				$('#three').hide();
+			} else {
+				$('#one').show();
+				$('#two').show();
+				$('#three').show();
+			}
+		});
 
+		$('#general').click( function() {
+			if($('#one').is(":visible")){
+				$('#one').hide();
+			} else {
+				$('#one').show();
+			}
+		});
+
+		$('#avail').click( function() {
+			if($('#two').is(":visible")){
+				$('#two').hide();
+			} else {
+				$('#two').show();
+			}
+		});
+
+		$('#content').click( function() {
+			if($('#three').is(":visible")){
+				$('#three').hide();
+			} else {
+				$('#three').show();
+			}
+		});
 	</script>
 </html>
