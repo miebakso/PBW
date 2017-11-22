@@ -52,7 +52,7 @@
 			</div>
 			<div style="margin-top: 100px; padding: 5px;">
 				<div style="padding: 0 10%">
-				<form>
+				<form method="post" action="../../phpScript/upload.php">
 				 	<fieldset >
 				  	<legend>
 				  		<div id="general" class="w3-button w3-black w3-text-white">General <i class="fa fa-caret-down" aria-hidden="true"></i></div>
@@ -129,8 +129,10 @@
 						  </label>
 						</div>
 				 	</fieldset>
-
-				 	<center><button class="w3-button w3-black w3-text-white">SAVE AND RETURN TO COURSE</button> <div id="cancel" class="w3-button w3-black w3-text-white">CANCEL</div></center>
+							<input type="hidden" name="ID_A" value="<?php echo $_GET['id_a']?>">
+							<input type="hidden" name="actType" value="<?php echo $_GET['type']?>">
+							<input type="hidden" name="courseTitle" value="<?php echo $_GET['courseTitle']?>">
+				 	<center><input type="submit" class="w3-button w3-black w3-text-white" value="SAVE AND RETURN TO COURSE"> <div id="cancel" class="w3-button w3-black w3-text-white">CANCEL</div></center>
 				</form>
 				</div>
 			</div>
