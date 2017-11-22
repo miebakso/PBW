@@ -64,6 +64,7 @@
 				
 			?>
 		</div>
+		
 	</body>
 	<script>
 		// Get the modal
@@ -73,9 +74,9 @@
 		$('#add').click(function(){
 			//console.log($('input[name=type]:checked', '#myForm').val());
 			if($('input[name=type]:checked', '#myForm').val()==1){
-				window.location = "addingActivity.php?type=1";
+				window.location = "addingActivity.php?type=1&<?php echo "id=".$_GET['id']."&courseTitle=".$_GET['courseTitle']; ?>";
 			} else if($('input[name=type]:checked', '#myForm').val()==0){
-				window.location = "addingActivity.php?type=0";
+				window.location = "addingActivity.php?type=0&<?php echo "id=".$_GET['id']."&courseTitle=".$_GET['courseTitle']; ?>";
 			}
 		});
 		

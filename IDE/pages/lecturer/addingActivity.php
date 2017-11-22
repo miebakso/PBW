@@ -44,7 +44,7 @@
 		<div class="courses" style="height: 700px; overflow-y: scroll;">
 			<div class="panel panel-default">
 			  <div class="panel-heading">
-			  	<div class="overview">Adding new Assignment</div>
+			  	<div class="overview">Adding new <?php echo($_GET["type"]=="1")?"Assignment":"File";?></div>
 			  </div>
 			</div>
 			<div>
@@ -73,7 +73,9 @@
 
 				 	</fieldset>
 
-				 	<fieldset >
+				 	<?php
+							if($_GET["type"]=="1"){
+									echo '<fieldset >
 				  	<legend>
 				  		<div id="avail" class="w3-button w3-black w3-text-white">Availability <i class="fa fa-caret-down" aria-hidden="true"></i></div>
 				  	</legend>
@@ -108,7 +110,9 @@
 						    </div>
 						  </div>
 
-						</div>
+						</div>';
+							}
+					 ?>
 
 
 				 	</fieldset>
@@ -120,53 +124,62 @@
 				  	
 				  	<div id="three"
 					  	<label class="custom-file">
-						    <input class="inputfile" type="file"  id="file" />
-						    <span>Select files <i class="fa fa-question-circle" aria-hidden="true"></i></span>
+						    <input class="inputfile" type="file"  id="file"/>
+						    <label for="file">Select files <i class="fa fa-question-circle" aria-hidden="true"></i></label>
 						  </label>
 						</div>
 				 	</fieldset>
 
-				 	<center><button class="w3-button w3-black w3-text-white">SAVE AND RETURN TO COURSE</button> <div class="w3-button w3-black w3-text-white">CANCEL</div></center>
+				 	<center><button class="w3-button w3-black w3-text-white">SAVE AND RETURN TO COURSE</button> <div id="cancel" class="w3-button w3-black w3-text-white">CANCEL</div></center>
 				</form>
 				</div>
 			</div>
 		</div>
 	</body>
 	<script>
-		$('#all').click( function() {
-			if($('#one').is(":visible") || $('#two').is(":visible") || $('#three').is(":visible")){
-				$('#one').hide();
-				$('#two').hide();
-				$('#three').hide();
-			} else {
-				$('#one').show();
-				$('#two').show();
-				$('#three').show();
-			}
-		});
+		$(document).ready(function(){
+			$('#all').click( function() {
+				if($('#one').is(":visible") || $('#two').is(":visible") || $('#three').is(":visible")){
+					$("#all").html("Expand All");
+					$('#one').hide();
+					$('#two').hide();
+					$('#three').hide();
+				} else {
+					$("#all").html("Collapse All");
+					$('#one').show();
+					$('#two').show();
+					$('#three').show();
+				}
+			});
 
-		$('#general').click( function() {
-			if($('#one').is(":visible")){
-				$('#one').hide();
-			} else {
-				$('#one').show();
-			}
-		});
+			$('#general').click( function() {
+				if($('#one').is(":visible")){
+					$('#one').hide();
+				} else {
+					$('#one').show();
+				}
+			});
 
-		$('#avail').click( function() {
-			if($('#two').is(":visible")){
-				$('#two').hide();
-			} else {
-				$('#two').show();
-			}
-		});
+			$('#avail').click( function() {
+				if($('#two').is(":visible")){
+					$('#two').hide();
+				} else {
+					$('#two').show();
+				}
+			});
 
-		$('#content').click( function() {
-			if($('#three').is(":visible")){
-				$('#three').hide();
-			} else {
-				$('#three').show();
-			}
+			$('#content').click( function() {
+				if($('#three').is(":visible")){
+					$('#three').hide();
+				} else {
+					$('#three').show();
+				}
+			});
+
+			$('#cancel').click(function(){
+				window.location="course.php?&<?php echo "id=".$_GET['id']."&courseTitle=".$_GET['courseTitle']; ?>";
+			})
+
 		});
 	</script>
 </html>
