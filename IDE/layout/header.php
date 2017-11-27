@@ -1,5 +1,5 @@
 
-<div class="header-container">
+<header class="header-container w3-top">
 	<div class="row">
 		<div class="col-9">
 			<div class="header-content">
@@ -13,4 +13,4 @@
 			<img class="header-logo" src="../../img/logo.png" alt="Logo Unpar">
 		</div>
 	</div>
-</div>
+</header>

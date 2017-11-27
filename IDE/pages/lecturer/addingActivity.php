@@ -41,7 +41,7 @@
 			<!-- include sidebar -->
 			<?php include("../../layout/sidebar.php"); ?>
 		</div>
-		<div class="courses" style="height: 700px; overflow-y: scroll;">
+		<div class="courses" style="height: 700px;margin-top:185px">
 			<div class="panel panel-default">
 			  <div class="panel-heading">
 			  	<div class="overview">Adding new <?php echo($_GET["type"]=="1")?"Assignment":"File";?></div>
@@ -52,7 +52,7 @@
 			</div>
 			<div style="margin-top: 100px; padding: 5px;">
 				<div style="padding: 0 10%">
-				<form method="post" action="../../phpScript/upload.php">
+				<form method="post" action="../../phpScript/upload.php" enctype="multipart/form-data">
 				 	<fieldset >
 				  	<legend>
 				  		<div id="general" class="w3-button w3-black w3-text-white">General <i class="fa fa-caret-down" aria-hidden="true"></i></div>
@@ -74,7 +74,7 @@
 				 	</fieldset>
 
 				 	<?php
-							if($_GET["type"]=="1"){
+							if($_GET["type"]=="assignment"){
 									echo '<fieldset >
 				  	<legend>
 				  		<div id="avail" class="w3-button w3-black w3-text-white">Availability <i class="fa fa-caret-down" aria-hidden="true"></i></div>
@@ -124,8 +124,8 @@
 				  	
 				  	<div id="three"
 					  	<label class="custom-file">
-						    <input class="inputfile" type="file"  id="file"/>
-						    <label for="file">Select files <i class="fa fa-question-circle" aria-hidden="true"></i></label>
+						    <input class="inputfile" type="file" name="file" id="file"/>
+						    <label for="file"><span id="filename">Select files </span><i class="fa fa-question-circle" aria-hidden="true"> </i></label>
 						  </label>
 						</div>
 				 	</fieldset>
@@ -180,8 +180,11 @@
 
 			$('#cancel').click(function(){
 				window.location="course.php?&<?php echo "id=".$_GET['id']."&courseTitle=".$_GET['courseTitle']; ?>";
-			})
-
+			});
+			
+			$('#file').change(function(e){
+					$("#filename").html(e.target.files[0].name+" ");
+			});
 		});
 	</script>
 </html>

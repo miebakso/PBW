@@ -5,7 +5,7 @@
     $link = "lct.php";
   }
 ?>
-<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:300px">
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:300px;top:180px">
   <div class="sidebar-content">
   	<p>You are logged in as</p>
   	<h5><?php echo $_SESSION['userID'];?></h5>
