@@ -8,7 +8,7 @@
 			$query = "SELECT * FROM users WHERE username='$name'";
 		}
 		$res=$conn->query($query)->fetch_array();
-		if($conn->query($query)->num_rows==0){
+		if($conn->query($query)->num_rows()==0){
 			echo "WRONG USERNAME";
 		}else{
 			setcookie("username",$name,time()+(86400*30),"/");
