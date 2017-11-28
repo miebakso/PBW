@@ -46,7 +46,7 @@
 						if($_SESSION['job']=='lecturer'){
 							echo "<div><a href='submission.php'>";
 						}else{
-							echo "<div><a href='submit.php'>";
+							echo "<div><a href='submit.php?ID_A=".$row['ID_A']."'>";
 						}
 					}
 					echo (isset($row['title'])?$row['title']:"null");
