@@ -125,7 +125,7 @@
 				  		<div id="content" class="w3-button w3-black w3-text-white">Content <i class="fa fa-caret-down" aria-hidden="true"></i></div>
 				  	</legend>
 				  	
-				  	<div id="three"
+				  	<div id="three">
 					  	<label class="custom-file">
 						    <input class="inputfile" type="file" name="file" id="file"/>
 						    <label for="file"><span id="filename">Select files </span><i class="fa fa-question-circle" aria-hidden="true"> </i></label>

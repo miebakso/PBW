@@ -41,7 +41,7 @@
 			if($result=$conn->query($query)){
 				while($row=$result->fetch_array()){
 					echo "<div><a href='../..".$row['fileDir']."' download>";
-					echo isset($row['title'])?$row['title']:"null";
+					echo (isset($row['title'])?$row['title']:"null");
 					echo "</a></div>";
 				}
 			}
