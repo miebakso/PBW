@@ -16,5 +16,6 @@
         }
         $fileType=pathinfo($target_file,PATHINFO_EXTENSION);
         move_uploaded_file($_FILES["file"]["tmp_name"], $target_file);
+        header('Location:'."../pages/lecturer/course.php?&id=".$_POST['id']."&courseTitle=".$_POST['courseTitle']);
     }
 ?>
