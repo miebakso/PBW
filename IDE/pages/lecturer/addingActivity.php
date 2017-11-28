@@ -30,6 +30,9 @@
 				position: absolute;
 				z-index: -1;
 			}
+			#filename:hover{
+				cursor:pointer;
+			}
 		</style>
 	</head>
 	
@@ -62,7 +65,7 @@
 					  	<div class="form-group row">
 						    <label  style="color: red" class="col-sm-2 col-form-label"><center>Name*</center></label>
 						    <div class="col-sm-10">
-						      <input type="text" class="form-control" id="" >
+						      <input type="text" class="form-control" id="" name="title" required>
 						    </div>
 						    <label style="margin-top: 20px" class="col-sm-2 col-form-label"><center>Description</center></label>
 						    <div style="margin-top: 5px" class="col-sm-10">
@@ -85,12 +88,12 @@
 					  	<div class="form-group row">
 						    <label  class="col-sm-2 col-form-label"><center>Allow submission from <i class="fa fa-question-circle" aria-hidden="true"></i></center></label>
 						    <div class="col-sm-2">
-						      <input type="date" class="form-control" id="" >
+						      <input type="date" class="form-control" id="" name="startdate" >
 						      
 						    </div>
 						    <div class="col-sm-2">
 						      
-						      <input type="checkbox" class="form-check-input">
+						      <input type="checkbox" class="form-check-input" name="isStartdate">
 						     	<label class="form-check-label">
 						      Enable
 						    	</label>
@@ -100,10 +103,10 @@
 						  <div class="form-group row">
 						    <label  class="col-sm-2 col-form-label"><center>Due date <i class="fa fa-question-circle" aria-hidden="true"></i></center></label>
 						    <div class="col-sm-2">
-						      <input type="date" class="form-control" id="" >
+						      <input type="date" class="form-control" id="" name="duedate">
 						    </div>
 						    <div class="col-sm-2">
-					      	<input type="checkbox" class="form-check-input">
+					      	<input type="checkbox" class="form-check-input" name="isDuedate">
 						     	<label class="form-check-label">
 						      Enable
 						    	</label>
@@ -130,8 +133,10 @@
 						</div>
 				 	</fieldset>
 							<input type="hidden" name="ID_A" value="<?php echo $_GET['id_a']?>">
+							<input type="hidden" name="ID" value="<?php echo $_GET['id']?>">
 							<input type="hidden" name="actType" value="<?php echo $_GET['type']?>">
 							<input type="hidden" name="courseTitle" value="<?php echo $_GET['courseTitle']?>">
+							<input type="hidden" name="topic" value="<?php echo $_GET['topic']?>">
 				 	<center><input type="submit" class="w3-button w3-black w3-text-white" value="SAVE AND RETURN TO COURSE"> <div id="cancel" class="w3-button w3-black w3-text-white">CANCEL</div></center>
 				</form>
 				</div>

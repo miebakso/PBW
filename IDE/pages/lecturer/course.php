@@ -30,11 +30,17 @@
 		$('#add').click(function(){
 			//console.log($('input[name=type]:checked', '#myForm').val());
 			if($('input[name=type]:checked', '#myForm').val()==1){
-				window.location = "addingActivity.php?id_a=1&type=assignment&<?php echo "id=".$_GET['id']."&courseTitle=".$_GET['courseTitle']; ?>";
+				window.location = "addingActivity.php?id_a=1&type=assignment&"+"topic="+topics+"&<?php echo "id=".$_GET['id']."&courseTitle=".$_GET['courseTitle']; ?>";
 			} else if($('input[name=type]:checked', '#myForm').val()==0){
-				window.location = "addingActivity.php?id_a=2&type=files&<?php echo "id=".$_GET['id']."&courseTitle=".$_GET['courseTitle']; ?>";
+				window.location = "addingActivity.php?id_a=2&type=files&"+"topic="+topics+"&<?php echo "id=".$_GET['id']."&courseTitle=".$_GET['courseTitle']; ?>";
 			}
 		});
+
+		var topics=0;
+		$(".add_act_btn").click(function(){
+			document.getElementById('modal').style.display='block';
+			topics=parseInt($(this).parent().prev().prev().find("#topicTitle").html().substr(6));
+		})
 		
 		// When the user clicks anywhere outside of the modal, close it
 		window.onclick = function (event) {

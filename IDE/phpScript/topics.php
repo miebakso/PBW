@@ -1,8 +1,6 @@
 <?php
 	include('connection.php');
 	$id = $_GET['id'];
-	$query = "SELECT ID_A, topic  FROM Activities  WHERE ID_C = $id";
-	$temp =  $conn->query($query);
 ?>
 
 <div class="panel panel-default">
@@ -29,15 +27,25 @@
 	</div>
 </div>
 <?php 
-	while ($row = $temp->fetch_array()) {
+	$ct=1;
+	while ($ct<6) {
 		echo "
 		<div class='panel panel-default'>
 			<div class='panel-body'>
-			<a href='#'><i class='fa fa-newspaper-o' aria-hidden='true'></i> Topic ".$row['topic']."</a>
-			<br>
-			<div class='add-activity' style='margin-top: 10px;'>
+			<a href='#'><i class='fa fa-newspaper-o' aria-hidden='true'></i><span id='topicTitle'> Topic $ct</span></a>
+			<div>";
+
+			$query = "SELECT * FROM Activities  WHERE ID_C = $id AND topic = $ct";
+
+			if($result=$conn->query($query)){
+				while($row=$result->fetch_array()){
+					echo "<div>".isset($row['title'])?$row['title']:"null"."</div>";
+				}
+			}
+
+		echo "</div><div class='add-activity' style='margin-top: 10px;'>
 			
-				<a href='#' onclick=document.getElementById('modal').style.display='block' class='btn btn-secondary btn-sm active' role='button' aria-pressed='true'>Add Activity</a>
+				<a href='#' class='btn btn-secondary btn-sm active add_act_btn' role='button' aria-pressed='true'>Add Activity</a>
 			
 			</div>
 
@@ -45,6 +53,7 @@
 
 		</div>
 		";
+		$ct++;
 	}
-	
 ?>
+
