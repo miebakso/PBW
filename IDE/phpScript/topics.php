@@ -33,7 +33,7 @@
 					echo "
 					<div class='add-activity' style='margin-top: 10px;'>
 				
-						<a href='#' class='btn btn-secondary btn-sm active add_act_btn' role='button' aria-pressed='true'>Add Activity</a>
+						<a href='#' class='btn btn-secondary btn-sm active add_act_btn' role='button' id='add' aria-pressed='true'>Add Activity</a>
 				
 					</div>
 					";
