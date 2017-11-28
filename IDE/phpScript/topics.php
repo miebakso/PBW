@@ -40,7 +40,15 @@
 
 			if($result=$conn->query($query)){
 				while($row=$result->fetch_array()){
-					echo "<div><a href='../..".$row['fileDir']."' download>";
+					if($row['ID_AT']==2){
+						echo "<div><a href='../..".$row['fileDir']."' download>";
+					}else{
+						if($_SESSION['job']=='lecturer'){
+							echo "<div><a href='submission.php'>";
+						}else{
+							echo "<div><a href='submit.php?ID_A=".$row['ID_A']."'>";
+						}
+					}
 					echo (isset($row['title'])?$row['title']:"null");
 					echo "</a></div>";
 				}
