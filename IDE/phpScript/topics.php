@@ -5,7 +5,7 @@
 
 <div class="panel panel-default">
 	<div class="panel-heading">
-	<div class="overview"><?php echo $_GET['courseTitle'] ?></div>
+		<div class="overview"><?php echo $_GET['courseTitle'] ?></div>
 	</div>
 </div>
 <div id="modal" class="w3-modal">
@@ -40,7 +40,9 @@
 
 			if($result=$conn->query($query)){
 				while($row=$result->fetch_array()){
-					echo "<div>".isset($row['title'])?$row['title']:"null"."</div>";
+					echo "<div><a href='../..".$row['fileDir']."' download>";
+					echo isset($row['title'])?$row['title']:"null";
+					echo "</a></div>";
 				}
 			}
 
