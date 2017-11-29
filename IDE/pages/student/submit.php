@@ -75,7 +75,11 @@
                                 echo "</a>";
                               ?>
 						    </div>
+
 							</div>
+
+
+						</div>
 
 
 					    <div class="form-group row">
