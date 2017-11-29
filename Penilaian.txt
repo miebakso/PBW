@@ -24,3 +24,5 @@ Nilai tambah:
 	- Menggunakan Git
 	
 	- File tertata rapih
+	
+	- Mahasiswa bisa melihat dan mendownload file yang telah disubmit

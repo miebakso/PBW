@@ -66,17 +66,32 @@
 
 					    ?>
 
-							<div class="form-group row">
-						    <label  class="col-sm-2 col-form-label">Assignment Detail</label>
-						    <div class="col-sm-10">
-									<?php 
-										echo "<a href='../..".$temp2['fileDir']."' download>";
-										echo (isset($temp2['title'])?basename($temp2['fileDir']):"null");
-										echo "</a>";
-									?>
+								<div class="form-group row">
+									<label  class="col-sm-2 col-form-label">Assignment Detail</label>
+										<div class="col-sm-10">
+												<?php 
+													echo "<a href='../..".$temp2['fileDir']."' download>";
+													echo (isset($temp2['title'])?basename($temp2['fileDir']):"null");
+													echo "</a>";
+												?>
+										</div>
 						    </div>
 
-							</div>
+							<div class="form-group row">
+						    <label  class="col-sm-2 col-form-label">Submission Detail</label>
+						    <div class="col-sm-10">
+										<?php 
+											if($check){
+												echo "<a href='../..".$data['fileDirectory']."' download>";
+												echo (isset($temp2['title'])?basename($data['fileDirectory']):"null");
+												echo "</a>";
+											}else{
+												echo "<a>NONE</a>";
+											}
+										?>
+									</div>
+						    </div>
+
 					    <div class="form-group row">
 						    <label  class="col-sm-2 col-form-label">Due Date</label>
 						    <div class="col-sm-10">
