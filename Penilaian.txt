@@ -1,0 +1,26 @@
+Fitur:
+
+- Semua sudah dikerjakan
+
+- Fitur optional 1, jadi kita sudah menggunakan cookie, bila logout, tersimpan
+
+- Fitur optional 2, jadi kita pada sudah membuat  sebuah file dengan nama topics.php di folder phpScript. Sudah bisa ada list dari topik pada suatu matakuliah beserta activity yang pernah ditambahkan.
+	jika user seorang lecturer ada tombol add activity, dan student tidak.
+
+- Fitur optional 3, Tombol collpase sudah berfungsi, dan tambpilanny berbeda bila assign file atau assignment
+
+- Fitur optional 4, sudah bila upload file file dan set tugas ke database, beserta pathny, sudah di cek ada file yang diupload
+
+- Fitur option 5, sudah bisa di zip dan ada mendownload semua file yang dikumpulkan.
+
+Nilai tambah:
+
+	- Kode query lebih effisien dariapda yang dicontohkan
+	
+	- Kita pakai logout.php kita unset bila logout
+	
+	- Menggunakan jQuery, Bootstrap, W3-css, font-awesome
+	
+	- Menggunakan Git
+	
+	- File tertata rapih

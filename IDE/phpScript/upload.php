@@ -4,7 +4,9 @@
     $courseTitle=substr($_POST['courseTitle'],0,strpos($_POST['courseTitle'],"/"));
     // $query="INSERT INTO submissions (ID_A,ID_U,submitTime,fileDirectory) VALUES(".$_POST['ID_A'].",".$_SESSION['ID_U'].",".time().",/upload/".$_POST['actType']."/$courseTitle/".basename($_FILES["file"]["name"]).")";
     $startdate=isset($_POST['isStartdate'])?$_POST['startdate']:"NULL";
+    $startdate="'".$startdate."'";
     $duedate=isset($_POST['isDuedate'])?$_POST['duedate']:"NULL";
+    $duedate="'".$duedate."'";
     $topic=$_POST['topic'];
     $query="INSERT INTO activities (ID_AT,ID_C,dateOpen,dateClose,submissions,title,topic,fileDir) VALUES(".$_POST['ID_A'].','.$_POST['ID'].",$startdate,$duedate,0,'".$_POST['title']."',$topic".",'/upload/".$_POST['actType']."/$courseTitle/".basename($_FILES["file"]["name"])."')";
     echo $query;

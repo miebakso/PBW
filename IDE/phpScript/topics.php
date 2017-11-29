@@ -44,7 +44,7 @@
 						echo "<div><a href='../..".$row['fileDir']."' download>";
 					}else{
 						if($_SESSION['job']=='lecturer'){
-							echo "<div><a href='submission.php'>";
+							echo "<div><a href='submission.php?ID_A=".$row['ID_A']."'>";
 						}else{
 							echo "<div><a href='submit.php?ID_A=".$row['ID_A']."'>";
 						}

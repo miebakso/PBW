@@ -1,5 +1,9 @@
 <?php
-	include("../../phpScript/connection.php");
+    include("../../phpScript/connection.php");
+    
+	$query = "SELECT * FROM Activities  WHERE ID_A=".$_GET['ID_A'];
+    $row=$conn->query($query)->fetch_array();
+    $courseCode=$conn->query("SELECT * FROM Courses WHERE ID_C =".$row['ID_C'])->fetch_array()['code'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,13 +24,23 @@
 		<div class="courses" style="margin-top:200px">
 			<div class="container" style="margin-top:300px">
 				<div class="panel panel-default">
-				  <div class="panel-heading"><?php //$_GET['title'] ?>Title</div>
+				  <div class="panel-heading"><?php echo $row['title'];?></div>
 				  <div class="panel-body">
-					  <form>
-					    <div class="form-group row">
-						    <label  class="col-sm-2 col-form-label">Date</label>
+					  <form method="get" action="../../phpScript/downloadAll.php">
+                      <div class="form-group row">
+						    <label  class="col-sm-2 col-form-label">Uploaded File</label>
 						    <div class="col-sm-10">
-						      Fucking Date
+                              <?php 
+                                echo "<a href='../..".$row['fileDir']."' download>";
+                                echo (isset($row['title'])?basename($row['fileDir']):"null");
+                                echo "</a>";
+                              ?>
+						    </div>
+						</div>
+					    <div class="form-group row">
+						    <label  class="col-sm-2 col-form-label">Due Date</label>
+						    <div class="col-sm-10">
+						      <?php echo $row['dateOpen']; ?>
 						    </div>
 						  </div>
 
@@ -35,11 +49,15 @@
 						    
 						    <label  class="col-sm-2 col-form-label">Submission</label>
 						  	<div class="col-sm-10">
-						      No Fucking Submission
+						      <?php echo $row['submissions']; ?>
 						    </div>
 						  </div>
 
-						  <input type="submit" class="w3-button w3-black w3-text-white" value="Download All The Fucking File">
+                          <input type="hidden" name="path" value="<?php echo dirname($row['fileDir']); ?>">
+                          <input type="hidden" name="ID_A" value="<?php echo $row['ID_A']; ?>">
+                          <input type="hidden" name="code" value="<?php echo $courseCode; ?>">
+
+						  <input type="submit" class="w3-button w3-black w3-text-white" value="Download All File in Zip">
 					  </form>
 				  </div>
 				</div>
