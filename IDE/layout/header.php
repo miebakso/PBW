@@ -1,4 +1,9 @@
-
+<?php
+	session_start();
+	if(!isset($_SESSION['userID'])){
+		header ('Location: /PBW/IDE/index.php');
+	}
+?>
 <header class="header-container w3-top">
 	<div class="row">
 		<div class="col-9">
