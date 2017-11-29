@@ -65,7 +65,6 @@
 					  		//echo "<input type='hidden' name='ID_C' value='".$temp3['ID_C']."'>";
 
 					    ?>
-<<<<<<< HEAD
 							<div class="form-group row">
 						    <label  class="col-sm-2 col-form-label">Uploaded File</label>
 						    <div class="col-sm-10">
@@ -76,8 +75,6 @@
                               ?>
 						    </div>
 						</div>
-=======
->>>>>>> ff5b40ee6adfb0a4cd64d81b3646d4f4d58cf489
 
 					    <div class="form-group row">
 						    <label  class="col-sm-2 col-form-label">Due Date</label>
