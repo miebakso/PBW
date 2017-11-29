@@ -7,6 +7,7 @@
   $ID_A = $_POST['ID_A'];
   //$ID_C = $_POST['ID_C'];
   $ID_U = $_SESSION['ID_U'];
+  $userID = $_SESSION['userID'];
   $course_code = $_POST['course_code'];
   
   $date = date("Y-m-d h:i:sa");
@@ -14,7 +15,7 @@
   $name = $_FILES['file']['name'];
   $temp_name = $_FILES['file']["tmp_name"];
   $path = "/upload/assignments/$course_code/answer/";
-  $final = "$path$ID_U-$name";
+  $final = "$path$userID-$name";
   echo $path."<br>";
   $query="INSERT INTO submissions (ID_A, ID_U, submitTime,fileDirectory) VALUES ($ID_A,$ID_U,'$date','$final')";
   
