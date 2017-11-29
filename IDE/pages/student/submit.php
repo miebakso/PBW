@@ -43,7 +43,7 @@
 			<?php include("../../layout/sidebar.php"); ?>
 		</div>
 		<div class="courses" style="margin-top:200px">
-			<div class="container" style="margin-top:300px">
+			<div class="container" style="margin-top:200px">
 				<div class="panel panel-default">
 				  <div class="panel-heading"><?php echo $temp2['title'] ?></div>
 				  <div class="panel-body">
@@ -67,7 +67,7 @@
 					    ?>
 
 							<div class="form-group row">
-						    <label  class="col-sm-2 col-form-label">Uploaded File</label>
+						    <label  class="col-sm-2 col-form-label">Assignment Detail</label>
 						    <div class="col-sm-10">
 									<?php 
 										echo "<a href='../..".$temp2['fileDir']."' download>";
@@ -77,11 +77,6 @@
 						    </div>
 
 							</div>
-
-
-						
-
-
 					    <div class="form-group row">
 						    <label  class="col-sm-2 col-form-label">Due Date</label>
 						    <div class="col-sm-10">
